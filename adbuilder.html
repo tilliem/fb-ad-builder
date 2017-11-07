@@ -1,0 +1,57 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
+     <script type="text/javascript" src="script.js"></script>
+     <link rel="stylesheet" type="text/css" href="style.css">
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+
+      <form class="message-form">
+        <div class="form-group">
+          <span>1. Choose Image</span>
+          <input id="image-input" type="file" name="image" accept="image/*"/>
+          <!-- onchange="previewImage(this)" -->
+        </div>
+        <div class="form-group">
+          <span>2. Change Copy</span>
+          <input type="text" value="Sign Petition" class="message-box"/>
+          <a id="change-copy">Change Copy</a>
+        </div>
+        <div class="form-group">
+          <span>3. Display Badge</span>
+          <input type="checkbox" id="badge-switch" checked/><label for="badge-switch">Toggle</label>
+        </div>
+        <div class="form-group">
+          <span>4. Display Overlay</span>
+          <input type="checkbox" id="switch" checked/><label for="switch">Toggle</label>
+        </div>
+        <button type="button" class="message-submit-button">
+          RENDER IMAGE
+        </button>
+        <small>Image will open in popup, then right click & download.</small>
+      </form>
+
+      <div class="lightbox">
+      <a href="#" class="close-lightbox">&times;</a>
+      <img src="" class="final-image"/>
+      </div>
+
+    <div id="final-wrap">
+        <img id="final-image" src>
+        <div id="img-overlay" class="active"></div>
+        <div class="cta active">
+            <p class="final-message">Sign Petition</p>
+        </div>
+    </div>
+</body>
+</html>
